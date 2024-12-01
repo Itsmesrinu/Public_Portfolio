@@ -98,3 +98,11 @@ function asideSectionTogglerBtn() {
         allSection[i].classList.toggle("open"); // Toggles open class for all sections (slide effect)
     }
 }
+
+// Activate the first nav item and show the corresponding section on page load
+document.addEventListener("DOMContentLoaded", function() {
+    navList[0].querySelector("a").classList.add("active"); // Set the first nav item as active
+    showSection(navList[0].querySelector("a")); // Show the corresponding section
+    addBackSection(0); // Add back-section class to the first section
+});
+
